@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Home
+comment0.text=\n\ Write\ a\ description\ of\ class\ MyWorld\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=Home()
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ MyWorld.\n\ \n
+comment2.params=
+comment2.target=void\ act()
+comment3.params=sound
+comment3.target=void\ playMusic(greenfoot.GreenfootSound)
+comment4.params=button
+comment4.target=void\ hover(Button)
+comment5.params=button
+comment5.target=void\ click(Button)
+numComments=6
