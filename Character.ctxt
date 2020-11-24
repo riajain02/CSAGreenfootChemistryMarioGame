@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Character
+comment0.text=\n\ Write\ a\ description\ of\ class\ Characters\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=x\ y\ imagePath
+comment1.target=Character(int,\ int,\ java.lang.String)
+comment2.params=image
+comment2.target=Character(greenfoot.GreenfootImage)
+comment3.params=
+comment3.target=void\ act()
+comment3.text=\n\ Act\ -\ do\ whatever\ the\ Characters\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
+numComments=4
