@@ -9,7 +9,7 @@ import java.util.ArrayList;
  */
 public class Levels extends World
 {
-    private GreenfootSound map = new GreenfootSound("map.mp3");
+    public static GreenfootSound map = new GreenfootSound("map.mp3");
     public static ArrayList<Level> levels = new ArrayList<>();
     
     /**

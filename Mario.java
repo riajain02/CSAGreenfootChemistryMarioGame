@@ -140,7 +140,7 @@ public class Mario extends LevelPage
         if(Greenfoot.isKeyDown("enter")) {
             GreenfootSound levelStart = new GreenfootSound("go.wav");
             if(level==1) {
-                Home world = new Home();
+                Level4 world = new Level4();
                 Greenfoot.setWorld(world);
                 levelStart.play();
             }
