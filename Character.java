@@ -9,6 +9,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Character extends Actor
 {
     public GreenfootImage image;
+    private int xCor;
+    private int yCor;
     
     public Character(int x, int y, String imagePath) {
         image = new GreenfootImage(imagePath);
@@ -24,8 +26,13 @@ public class Character extends Actor
      * Act - do whatever the Characters wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public void act() 
+    public void run() 
     {
-        // Add your action code here.
+        if(Greenfoot.isKeyDown("right")) {
+            xCor++;
+        }
+        if(Greenfoot.isKeyDown("left")) {
+            yCor++;
+        }
     }    
 }

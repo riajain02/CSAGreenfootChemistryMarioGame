@@ -154,6 +154,7 @@ public class Level4 extends World
         removeObject(text4);
         removeObject(text5);
         removeObject(text6);
-        setBackground("level4-1-page2.png");
+        Level4Game a = new Level4Game();
+        Greenfoot.setWorld(a);
     }
 }
