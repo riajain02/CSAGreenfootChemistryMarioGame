@@ -10,9 +10,9 @@ import java.util.List;
 public class Animation extends World
 {
     public static boolean startAnimation = false;
-    public GreenfootImage marioFront = new GreenfootImage("mariorunfront.png");
-    public GreenfootImage marioBack = new GreenfootImage("mariorunback.png");
-    public GreenfootImage marioSide = new GreenfootImage("mariostraight.png");
+    public static GreenfootImage marioFront = new GreenfootImage("mariorunfront.png");
+    public static GreenfootImage marioBack = new GreenfootImage("mariorunback.png");
+    public static GreenfootImage marioSide = new GreenfootImage("mariostraight.png");
     public Character marioAnimation = new Character(marioSide);
     public Character peachAnimation = new Character(450,300,"initialCl.png");
     public Character heart = new Character(100,100,"heart.png");

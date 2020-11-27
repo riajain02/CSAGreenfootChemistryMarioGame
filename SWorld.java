@@ -94,7 +94,7 @@ public class SWorld extends World
             return;
         }
         super.addObject(main, xLoc-scrolledX, yLoc-scrolledY);
-        mainActor = main;
+        mainActor=main;
         xRange=(int)Math.min(xRange, getWidth());
         yRange=(int)Math.min(yRange, getHeight());
         actorMinX=getWidth()/2-xRange/2;
