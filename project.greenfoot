@@ -1,5 +1,5 @@
 #Greenfoot project file
-class.Level1.image=level1-1-page2.png
+class.Level1.image=level1start.png
 class.Level4.image=lesson4chalkboard.png
 dependency1.from=Level4
 dependency1.to=LessonNotes
