@@ -149,8 +149,13 @@ public class Mario extends LevelPage
                 Greenfoot.setWorld(world);
                 levelStart.play();
             }
-            if(level==4) {
+            if(level == 4) {
                 Level4Game world = new Level4Game();
+                Greenfoot.setWorld(world);
+                levelStart.play();
+            }
+            if(level == 5) {
+                Level5 world = new Level5();
                 Greenfoot.setWorld(world);
                 levelStart.play();
             }
