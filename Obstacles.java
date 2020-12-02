@@ -13,16 +13,16 @@ public class Obstacles extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     
-    public Obstacles(String imPath, int x, int y)
-    {
-        GreenfootImage im = new GreenfootImage(imPath);
-        im.scale(x,y);
-        setImage(im);
-        
-    }
-    
     public void act() 
     {
         // Add your action code here.
-    }    
+    }
+    
+    public void limitX()
+    {
+        // FOR LEVEL 4
+        //if(Level4Game.m.getX()==) {
+            
+        //}
+    }
 }

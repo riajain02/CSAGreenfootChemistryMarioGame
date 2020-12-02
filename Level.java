@@ -11,7 +11,7 @@ public class Level extends LevelPage
     private GreenfootImage levelIncomplete = new GreenfootImage("level.png");
     private GreenfootImage levelComplete = new GreenfootImage("levelcompleted.png");
     public int level;
-    
+
     /**
      * Act - do whatever the Level wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.

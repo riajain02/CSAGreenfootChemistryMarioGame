@@ -24,6 +24,8 @@ public class Level4 extends World
         // Create a new world with 750x500 cells with a cell size of 1x1 pixels.
         super(750, 500, 1);
         setBackground("level4start.png");
+        showText(""+Levels.numLives,750/2+100,285);
+        showText(""+Levels.numTotCoins + " J",175,60);
     }
     
     public void act() 
@@ -31,6 +33,8 @@ public class Level4 extends World
         if(counter==0) {
             Greenfoot.delay(200);
             setBackground("level4-1.png");
+            showText(null,750/2+100,285);
+            showText(null,175,60);
             Greenfoot.delay(100);
             while(numEnters<10) {
                 if(Greenfoot.getKey()=="enter") {
@@ -55,7 +59,7 @@ public class Level4 extends World
             addObject(text5,365,350);
             Greenfoot.delay(50);
             numEnters=0;
-            while(numEnters<4) {
+            while(numEnters<5) {
                 if(Greenfoot.getKey()=="enter") {
                     numEnters++;
                     tutorial2();
@@ -138,10 +142,13 @@ public class Level4 extends World
                 ans3=Greenfoot.ask("Try again! What is the amount of energy required for this process? Include sign. Hint: We have one mole of Cl (g).");
             }
             removeObjects();
+            setBackground("level4-1-page2.png");
             Greenfoot.delay(100);
         }
-        else if(numEnters==3) {
-            setBackground("home.jpg");
+        else if(numEnters==4) {
+           Level4Game a = new Level4Game();
+           Greenfoot.setWorld(a);
+           numEnters=6;
         }
     }
     
@@ -154,7 +161,5 @@ public class Level4 extends World
         removeObject(text4);
         removeObject(text5);
         removeObject(text6);
-        Level4Game a = new Level4Game();
-        Greenfoot.setWorld(a);
     }
 }

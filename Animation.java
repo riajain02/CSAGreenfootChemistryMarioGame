@@ -19,7 +19,8 @@ public class Animation extends World
     public Character cage = new Character(200,300,"cage.png");
     public Character babyBowser = new Character(150,150,"babybowser.png");
     public static GreenfootSound animationMusic = new GreenfootSound("animation.mp3");
-    private GreenfootSound bowser = new GreenfootSound("bowserbackground.wav");
+    public static GreenfootSound bowser = new GreenfootSound("bowserbackground.wav");
+    public static Levels world = new Levels();
     private int marioXCor = 150;
     private int peachXCor = 550;
     private int peachYCor = 150;
@@ -39,6 +40,7 @@ public class Animation extends World
         addObject(marioAnimation,marioXCor,370);
         addObject(peachAnimation,550,150);
         Home.startTheme.stop();
+        Levels.map.stop();
         marioFront.scale(150,175);
         marioBack.scale(150,175);
         marioSide.scale(150,200);
@@ -178,9 +180,7 @@ public class Animation extends World
         Greenfoot.delay(1);
     }
     
-    
     private void endAnimation() {
-        Levels world = new Levels();
         Greenfoot.setWorld(world);
     }
 }

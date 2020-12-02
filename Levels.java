@@ -11,6 +11,8 @@ public class Levels extends World
 {
     public static GreenfootSound map = new GreenfootSound("map.mp3");
     public static ArrayList<Level> levels = new ArrayList<>();
+    public static int numLives=5;
+    public static int numTotCoins=0;
     
     /**
      * Constructor for objects of class Levels.
@@ -38,6 +40,7 @@ public class Levels extends World
         addObject(path2,290,75);
         addObject(path3,433,270);
         addObject(path4,590,419);
+        Home.playMusic(map);
     }
     
     public void addLevels()
@@ -64,6 +67,7 @@ public class Levels extends World
     
     public void act() 
     {
+        Animation.animationMusic.stop();
         Home.playMusic(map);
     }
 }

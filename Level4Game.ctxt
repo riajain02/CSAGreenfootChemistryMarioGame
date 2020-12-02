@@ -6,4 +6,6 @@ comment1.target=Level4Game()
 comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Level4Game.\n\ \n
 comment2.params=
 comment2.target=void\ act()
-numComments=3
+comment3.params=value\ precision
+comment3.target=double\ round(double,\ int)
+numComments=4
