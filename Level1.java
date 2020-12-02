@@ -28,7 +28,11 @@ public class Level1 extends World
             Greenfoot.delay(200);
             setBackground("level1-1.png");
             Greenfoot.delay(100);
+<<<<<<< HEAD
             while(numEnters<7) {
+=======
+            while(numEnters<6) {
+>>>>>>> 402969ec800e82b53a93b2bc9519230885d5c898
                 if(Greenfoot.getKey()=="enter") {
                     numEnters++;
                     tutorial();
@@ -46,19 +50,34 @@ public class Level1 extends World
     private void tutorial()
     {
         if(numEnters==1) {
+<<<<<<< HEAD
             addObject(chalkboard,175,200);
             Greenfoot.delay(50);
         }
         else if(numEnters==2) {
             addObject(text1,550,200);
+=======
+            addObject(chalkboard,175,230);
+            Greenfoot.delay(50);
+        }
+        else if(numEnters==2) {
+            addObject(text1,550,220);
+>>>>>>> 402969ec800e82b53a93b2bc9519230885d5c898
             Greenfoot.delay(50);
         }
         else if(numEnters==3) {
             String ans=Greenfoot.ask("What states of matter are involved in sublimation? Answer in the format: word, word");
+<<<<<<< HEAD
             while(!(ans.equals("solid, gas"))) {
                 ans=Greenfoot.ask("Try again! What states of matter are involved in sublimation? Hint: Read the chalkboard.");
             }
             addObject(text2,175,400);
+=======
+            while(!(ans.equals("gas, solid"))) {
+                ans=Greenfoot.ask("Try again! What states of matter are involved in sublimation? Hint: Read the chalkboard.");
+            }
+            addObject(text2,175,420);
+>>>>>>> 402969ec800e82b53a93b2bc9519230885d5c898
             Greenfoot.delay(50);
         }
         else if(numEnters==5) {
@@ -71,6 +90,7 @@ public class Level1 extends World
             
             setBackground("level1-1-page2.png");
         }
+<<<<<<< HEAD
         else if (numEnters == 6){
             Level1Game lvl1 = new Level1Game();
             Greenfoot.setWorld(lvl1);
@@ -79,3 +99,15 @@ public class Level1 extends World
     
 }
 
+=======
+        else if (numEnters==6) {
+            startLevel();
+        }
+    }
+    
+    private void startLevel()
+    {
+    
+    }
+}
+>>>>>>> 402969ec800e82b53a93b2bc9519230885d5c898

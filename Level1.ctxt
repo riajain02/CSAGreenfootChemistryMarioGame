@@ -8,4 +8,10 @@ comment2.params=
 comment2.target=void\ act()
 comment3.params=
 comment3.target=void\ tutorial()
+<<<<<<< HEAD
 numComments=4
+=======
+comment4.params=
+comment4.target=void\ startLevel()
+numComments=5
+>>>>>>> 402969ec800e82b53a93b2bc9519230885d5c898

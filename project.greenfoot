@@ -1,4 +1,5 @@
 #Greenfoot project file
+<<<<<<< HEAD
 class.Goomba.image=goomba.png
 class.Level1.image=level1start.png
 dependency1.from=Home
@@ -308,6 +309,71 @@ editor.fx.0.y=31
 height=1096
 package.numDependencies=100
 package.numTargets=38
+=======
+class.Level1.image=level1start.png
+class.Level4.image=lesson4chalkboard.png
+dependency1.from=Level4
+dependency1.to=LessonNotes
+dependency1.type=UsesDependency
+dependency10.from=Levels
+dependency10.to=Animation
+dependency10.type=UsesDependency
+dependency11.from=Levels
+dependency11.to=Home
+dependency11.type=UsesDependency
+dependency12.from=Level1
+dependency12.to=LessonNotes
+dependency12.type=UsesDependency
+dependency13.from=Home
+dependency13.to=Button
+dependency13.type=UsesDependency
+dependency14.from=Home
+dependency14.to=Animation
+dependency14.type=UsesDependency
+dependency15.from=Mario
+dependency15.to=Level1
+dependency15.type=UsesDependency
+dependency16.from=Mario
+dependency16.to=Level4
+dependency16.type=UsesDependency
+dependency17.from=Level
+dependency17.to=Levels
+dependency17.type=UsesDependency
+dependency18.from=Electron
+dependency18.to=Level4
+dependency18.type=UsesDependency
+dependency2.from=Level4
+dependency2.to=Electron
+dependency2.type=UsesDependency
+dependency3.from=Animation
+dependency3.to=Character
+dependency3.type=UsesDependency
+dependency4.from=Animation
+dependency4.to=Button
+dependency4.type=UsesDependency
+dependency5.from=Animation
+dependency5.to=Levels
+dependency5.type=UsesDependency
+dependency6.from=Animation
+dependency6.to=Home
+dependency6.type=UsesDependency
+dependency7.from=Levels
+dependency7.to=Level
+dependency7.type=UsesDependency
+dependency8.from=Levels
+dependency8.to=Mario
+dependency8.type=UsesDependency
+dependency9.from=Levels
+dependency9.to=Path
+dependency9.type=UsesDependency
+editor.fx.0.height=739
+editor.fx.0.width=816
+editor.fx.0.x=552
+editor.fx.0.y=114
+height=995
+package.numDependencies=18
+package.numTargets=14
+>>>>>>> 402969ec800e82b53a93b2bc9519230885d5c898
 project.charset=UTF-8
 publish.hasSource=false
 publish.locked=true
@@ -330,7 +396,11 @@ target1.width=100
 target1.x=0
 target1.y=0
 target10.height=50
+<<<<<<< HEAD
 target10.name=BrickBlock
+=======
+target10.name=Animation
+>>>>>>> 402969ec800e82b53a93b2bc9519230885d5c898
 target10.showInterface=false
 target10.type=ClassTarget
 target10.width=80
@@ -344,14 +414,22 @@ target11.width=80
 target11.x=0
 target11.y=0
 target12.height=50
+<<<<<<< HEAD
 target12.name=Level4Game
+=======
+target12.name=Level
+>>>>>>> 402969ec800e82b53a93b2bc9519230885d5c898
 target12.showInterface=false
 target12.type=ClassTarget
 target12.width=90
 target12.x=0
 target12.y=0
 target13.height=50
+<<<<<<< HEAD
 target13.name=PowerUps
+=======
+target13.name=Level1
+>>>>>>> 402969ec800e82b53a93b2bc9519230885d5c898
 target13.showInterface=false
 target13.type=ClassTarget
 target13.width=80
@@ -568,17 +646,25 @@ target6.width=90
 target6.x=0
 target6.y=0
 target7.height=50
+<<<<<<< HEAD
 target7.name=Coin
+=======
+target7.name=Button
+>>>>>>> 402969ec800e82b53a93b2bc9519230885d5c898
 target7.showInterface=false
 target7.type=ClassTarget
 target7.width=80
 target7.x=0
 target7.y=0
 target8.height=50
+<<<<<<< HEAD
 target8.name=Obstacles
+=======
+target8.name=ChlorineBox
+>>>>>>> 402969ec800e82b53a93b2bc9519230885d5c898
 target8.showInterface=false
 target8.type=ClassTarget
-target8.width=80
+target8.width=90
 target8.x=0
 target8.y=0
 target9.height=50
@@ -591,5 +677,10 @@ target9.y=0
 version=3.0.0
 width=1936
 world.lastInstantiated=Home
+<<<<<<< HEAD
 xPosition=0
 yPosition=0
+=======
+xPosition=452
+yPosition=23
+>>>>>>> 402969ec800e82b53a93b2bc9519230885d5c898
