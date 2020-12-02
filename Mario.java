@@ -151,7 +151,7 @@ public class Mario extends LevelPage
             }
             if(level==4) {
                 Level4 lesson4 = new Level4();
-                Character.counterr=0;
+                Character4.counterr=0;
                 Greenfoot.setWorld(lesson4);
                 levelStart.play();
             }

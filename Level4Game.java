@@ -9,7 +9,7 @@ import java.util.List;
  */
 public class Level4Game extends SWorld
 {
-    public static Character m = new Character(65,95,"initialK.png");
+    public static Character4 m = new Character4(65,95,"initialK.png");
     public static BrickBlock brickBlock;
     public static BrickBlock brickBlock2;
     public static BrickBlock brickBlock3;
@@ -112,10 +112,10 @@ public class Level4Game extends SWorld
         showText(("COINS × " + numCoins + "          ENERGY: " + round(numCoins*(-34.9),1) + " kJ"),200,30);
         showText(("LIVES × " + Levels.numLives),75,60);
         if(Level4Game.initialized) {
-            Character.coins = getObjects(Coin.class);
-            Character.bricks = getObjects(BrickBlock.class);
-            Character.qBlocks = getObjects(QuestionBlock.class);
-            Character.powerups = getObjects(PowerUps.class);
+            Character4.coins = getObjects(Coin.class);
+            Character4.bricks = getObjects(BrickBlock.class);
+            Character4.qBlocks = getObjects(QuestionBlock.class);
+            Character4.powerups = getObjects(PowerUps.class);
         }
         redMs = getObjects(RedMushroom.class);
         greenMs = getObjects(GreenMushroom.class);

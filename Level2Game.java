@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Level2Game extends SWorld
 {
-    private Actor m = new Character(50,75,"initialK.png");
+    public static Character4 m = new Character4(50,75,"initialK.png");
     /**
      * Constructor for objects of class Level2Game.
      * 
@@ -17,12 +17,12 @@ public class Level2Game extends SWorld
     {
         super(750, 500, 1, 2250);
         GreenfootImage level4background = new GreenfootImage("backgroundtest.png");
-        setScrollingBackground(level4background);
         addMainActor(m,375,250,450,500);
+        setScrollingBackground(level4background);
     }
     
     public void act()
     {
-        //m.run();
+        m.run(15);
     }
 }

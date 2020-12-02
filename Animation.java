@@ -13,11 +13,11 @@ public class Animation extends World
     public static GreenfootImage marioFront = new GreenfootImage("mariorunfront.png");
     public static GreenfootImage marioBack = new GreenfootImage("mariorunback.png");
     public static GreenfootImage marioSide = new GreenfootImage("mariostraight.png");
-    public Character marioAnimation = new Character(marioSide);
-    public Character peachAnimation = new Character(450,300,"initialCl.png");
-    public Character heart = new Character(100,100,"heart.png");
-    public Character cage = new Character(200,300,"cage.png");
-    public Character babyBowser = new Character(150,150,"babybowser.png");
+    public Character4 marioAnimation = new Character4(marioSide);
+    public Character4 peachAnimation = new Character4(450,300,"initialCl.png");
+    public Character4 heart = new Character4(100,100,"heart.png");
+    public Character4 cage = new Character4(200,300,"cage.png");
+    public Character4 babyBowser = new Character4(150,150,"babybowser.png");
     public static GreenfootSound animationMusic = new GreenfootSound("animation.mp3");
     public static GreenfootSound bowser = new GreenfootSound("bowserbackground.wav");
     public static Levels world = new Levels();
