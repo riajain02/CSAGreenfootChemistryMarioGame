@@ -97,8 +97,8 @@ public class SWorld extends World
         mainActor=main;
         xRange=(int)Math.min(xRange, getWidth());
         yRange=(int)Math.min(yRange, getHeight());
-        actorMinX=getWidth()/4-xRange/2;
-        actorMaxX=getWidth()/4+xRange/2;
+        actorMinX=getWidth()/2-xRange/2;
+        actorMaxX=getWidth()/2+xRange/2;
         actorMinY=getHeight()/2-yRange/2;
         actorMaxY=getHeight()/2+yRange/2;
         act();

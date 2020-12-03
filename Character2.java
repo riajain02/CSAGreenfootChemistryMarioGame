@@ -7,7 +7,7 @@
      * @author (your name) 
      * @version (a version number or a date)
      */
-    public class Character4 extends Character
+    public class Character2 extends Character
     {
         public GreenfootImage image;
         public int xCor;
@@ -22,7 +22,7 @@
         private GreenfootSound oneup = new GreenfootSound("1-up.mp3");
         private GreenfootSound powerupappears = new GreenfootSound("power-up-appears.mp3");
         private GreenfootSound jump = new GreenfootSound("jump.wav");
-        private GreenfootSound smash = new GreenfootSound("smash.wav");
+        private GreenfootSound spiny = new GreenfootSound("smash.wav");
         private GreenfootSound lifelost = new GreenfootSound("life-lost.mp3");
         private GreenfootSound levelcompleted = new GreenfootSound("levelcomplete.wav");
         private boolean touching=false;
@@ -44,15 +44,15 @@
         public static boolean alive=true;
         public static int counterr=0;
         private int y;
-        private boolean smashCounter=true;
+        private boolean spinyCounter=true;
         
-        public Character4(int x, int y, String imagePath) {
+        public Character2(int x, int y, String imagePath) {
             image = new GreenfootImage(imagePath);
             image.scale(x,y);
             setImage(image);
         }
         
-        public Character4(GreenfootImage image) {
+        public Character2(GreenfootImage image) {
             setImage(image);
         }
         
@@ -67,8 +67,8 @@
                 yVal=getY(); 
                 counterr++; 
                 counter=0; 
-                Level4Game.numCoins=0;
-                smashCounter=true;
+                Level2Game.numCoins=0;
+                spinyCounter=true;
                 coins=getWorld().getObjects(Coin.class);
                 for(Coin c : coins) {
                     c.coinRemoved=false;
@@ -88,7 +88,7 @@
             xCor=getX();
             yCor=getY();
             if(Greenfoot.isKeyDown("right")) {
-                if((!intersects(Level4Game.tubeS)||xVal>770)&&(!intersects(Level4Game.tubeM)||xVal>970)&&(!intersects(Level4Game.tubeL)||xVal>1170)&&(!intersects(Level4Game.tubeM2)||xVal>1370)&&(!intersects(Level4Game.tubeL2)||xVal>2570)) {
+                if((!intersects(Level2Game.tubeS)||xVal>770)&&(!intersects(Level2Game.tubeM)||xVal>970)&&(!intersects(Level2Game.tubeL)||xVal>1170)&&(!intersects(Level2Game.tubeM2)||xVal>1370)&&(!intersects(Level2Game.tubeL2)||xVal>2570)) {
                     int i=xCor;
                     xCor+=x;
                     if(i!=xCor && xCor!=764) {
@@ -117,7 +117,7 @@
                 else {setImage(image);}
             }
             else if(Greenfoot.isKeyDown("left")) {
-                if((!intersects(Level4Game.tubeS)||xVal<730)&&(!intersects(Level4Game.tubeM)||xVal<930)&&(!intersects(Level4Game.tubeL)||xVal<1130)&&(!intersects(Level4Game.tubeM2)||xVal<1330)&&(!intersects(Level4Game.tubeM2)||xVal>1370)&&(!intersects(Level4Game.tubeL2)||xVal>2570)) {
+                if((!intersects(Level2Game.tubeS)||xVal<730)&&(!intersects(Level2Game.tubeM)||xVal<930)&&(!intersects(Level2Game.tubeL)||xVal<1130)&&(!intersects(Level2Game.tubeM2)||xVal<1330)&&(!intersects(Level2Game.tubeM2)||xVal>1370)&&(!intersects(Level2Game.tubeL2)||xVal>2570)) {
                     int i=xCor;
                     xCor-=x;
                     if(i!=xCor && xCor>=764) {
@@ -229,7 +229,7 @@
                         Greenfoot.delay(1);
                     }
                     setBottomYCor();
-                    if(getWorld().getObjects(Character4.class).size()>0) {
+                    if(getWorld().getObjects(Character2.class).size()>0) {
                         while((getY()+(95/2)<minYCor)) {
                             setBottomYCor();
                             yCor+=10;
@@ -297,8 +297,8 @@
             type=0;
         }
         setBottomYCor();
-        if(getWorld().getObjects(Character4.class)!=null) {
-            if(getWorld().getObjects(Character4.class).size()>0) {
+        if(getWorld().getObjects(Character2.class)!=null) {
+            if(getWorld().getObjects(Character2.class).size()>0) {
                 if(alive) {
                     while(getY()+95/2<minYCor) {
                         setBottomYCor();
@@ -315,7 +315,7 @@
         }
     }
     
-    public void touchingBrick(BrickBlock b)
+    /*public void touchingBrick(BrickBlock b)
     {
         if(intersects(b) && (getY()-95/2)<=320 && (getY()-95/2)>=300) {
             if(b.blockHit==false) {
@@ -326,6 +326,7 @@
             b.blockHit=true;
         }
     }
+    */
     
     public void touchingCoin(Coin c)
     {
@@ -339,72 +340,27 @@
                 c.coinRemoved=true;
                 touching=true;
                 coin.play();
-                Level4Game.numCoins++;
+                Level2Game.numCoins++;
             }
         }
     }
     
-    public void touchingQBlock(QuestionBlock q, int x)
-    {
-        if(intersects(q) && (getY()-95/2)<=320 && (getY()-95/2)>=300) {
-            if(!q.qBlockHit) {
-               brickHit.scale(40,40);
-               q.setImage(brickHit);
-               bump.play();
-               q.qBlockHit=true;
-               if(x==1) {
-                   PowerUps p=new RedMushroom();
-                   getWorld().addObject(p,q.getX(),q.getY()-35);
-                   powerupappears.play();
-                   powerUpCounter++;
-               }
-               else if(x==2) {
-                   PowerUps p=new GreenMushroom();
-                   getWorld().addObject(p,q.getX(),q.getY()-35);
-                   Levels.numLives++;
-                   powerupappears.play();
-               }
-               else if(x==3) {
-                   PowerUps p=new RedMushroom();
-                   System.out.println(q.getX()+" "+(q.getY()-35));
-                   getWorld().addObject(p,1925,300-35);
-                   powerupappears.play();
-                   powerUpCounter++;
-                }
-            }
-        }
-    }
-    
-    public void powerUps(PowerUps p)
-    {
-        if(intersects(p)) {
-            if(!p.powerUpUsed) {
-               getWorld().removeObject(p);
-               if(p instanceof RedMushroom) {
-                   powerup.play();
-                }
-               else if(p instanceof GreenMushroom) {
-                   oneup.play();
-                }
-               p.powerUpUsed=true;
-            }
-        }
-    }
+   
     
     public void checkTouching()
     {
-        if(Level4Game.initialized) {
+        if(Level2Game.initialized) {
             if(coins!=null) {
                 for(Coin c : coins) {
                     touchingCoin(c);
                 }
             }
-            if(bricks!=null) {
+            /*if(bricks!=null) {
                 for(BrickBlock b : bricks) {
                     touchingBrick(b);
                 }
             }
-            if(qBlocks!=null) {
+            /*if(qBlocks!=null) {
                 for(QuestionBlock q : qBlocks) {
                     touchingQBlock(q,q.powerUpType);
                 }
@@ -414,15 +370,17 @@
                     powerUps(p);
                 }
             }
-            fall(Level4Game.m);
-            smash();
-            if(alive && getWorld().getObjects(Smasher.class).size()>0) {
-                if(intersects(Level4Game.smasher1)||intersects(Level4Game.smasher2)||intersects(Level4Game.smasher3) && getY()<400) {
-                    die(Level4Game.m);
+            */
+            //fall(Level2Game.m);
+            //smash();
+            if(alive && getWorld().getObjects(Spiny.class).size()>0) {
+                if((intersects(Level2Game.spiny1)||intersects(Level2Game.spiny2)||intersects(Level2Game.spiny3) ||intersects(Level2Game.spiny4)) && getY()<400) {
+                    die(Level2Game.m);
                 }
             }
             levelCompleted();
             gameOver();
+            
         }
     }
     
@@ -452,7 +410,7 @@
         }
     }
     
-    public void fall(Character4 m) {
+    /*public void fall(Character2 m) {
         if(intersects(Level4Game.hole)&& xVal>1600 && xVal<1660) {
             setImage(image);
             while(getY()<500) {
@@ -463,60 +421,62 @@
             die(m);
         }
     }
+    */
     
-    public void smash()
+    /*public void spiny()
     {
-        if(xVal>2700&&xVal<2900 && smashCounter) {
-            y=Level4Game.smasher1.getY();
-            smash.play();
+        if(xVal>2700&&xVal<2900 && spinyCounter) {
+            y=Level2Game.spiny1.getY();
+            spiny.play();
             while(y<430) {
                 y+=16;
                 run(15);
-                Level4Game.smasher1.setLocation(Level4Game.smasher1.getX(),y);
-                if(intersects(Level4Game.smasher1)) {
-                    die(Level4Game.m);
+                Level2Game.spiny1.setLocation(Level2Game.spiny1.getX(),y);
+                if(intersects(Level2Game.spiny1)) {
+                    die(Level2Game.m);
                 }
                 Greenfoot.delay(1);
             }
-            smashCounter=false;
+            spinyCounter=false;
         }
         else if(xVal>2950&&xVal<3150) {
-            y=Level4Game.smasher2.getY();
-            smash.play();
+            y=Level2Game.spiny2.getY();
+            spiny.play();
             while(y<430) {
                 y+=16;
                 run(15);
-                Level4Game.smasher2.setLocation(Level4Game.smasher2.getX(),y);
-                if(intersects(Level4Game.smasher2)) {
-                    die(Level4Game.m);
+                Level2Game.spiny2.setLocation(Level2Game.spiny2.getX(),y);
+                if(intersects(Level2Game.spiny2)) {
+                    die(Level2Game.m);
                 }
                 Greenfoot.delay(1);
             }
-            smashCounter=false;
+            spinyCounter=false;
         }
         else if(xVal>3200&&xVal<3400) {
-            y=Level4Game.smasher3.getY();
-            smash.play();
+            y=Level2Game.spiny3.getY();
+            spiny.play();
             while(y<430) {
                 y+=16;
                 run(15);
-                Level4Game.smasher3.setLocation(Level4Game.smasher3.getX(),y);
-                if(intersects(Level4Game.smasher3)) {
-                    die(Level4Game.m);
+                Level2Game.spiny3.setLocation(Level2Game.spiny3.getX(),y);
+                if(intersects(Level2Game.spiny3)) {
+                    die(Level2Game.m);
                 }
                 Greenfoot.delay(1);
             }
-            smashCounter=false;
+            spinyCounter=false;
         }
     }
+    */
     
     public void levelCompleted()
     {
         if(getWorld().getObjects(EndFlag.class)!=null) {
             if(getWorld().getObjects(EndFlag.class).size()>0) {
-                if(intersects(Level4Game.endflag)) {
-                    if(Level4Game.numCoins>=10) {
-                        Level4Game.level4.stop();
+                if(intersects(Level2Game.endflag)) {
+                    if(Level2Game.numCoins>=10) {
+                        Level2Game.level2.stop();
                         levelcompleted.play();
                         setImage(image);
                         Greenfoot.delay(100);
@@ -544,7 +504,7 @@
                             setLocation(x,410);
                             Greenfoot.delay(3);
                         }
-                        getWorld().removeObject(Level4Game.m);
+                        getWorld().removeObject(Level2Game.m);
                         Levels a = new Levels();
                         Greenfoot.setWorld(a);
                         if(LevelPage.levelsCompleted<4) {
@@ -553,7 +513,7 @@
                         Levels.numTotCoins+=10;
                     }
                     else {
-                        Level4Game.level4.stop();
+                        Level2Game.level2.stop();
                         NotEnoughCoins n=new NotEnoughCoins();
                         Greenfoot.setWorld(n);
                         Greenfoot.delay(500);
@@ -565,10 +525,10 @@
         }
     }
     
-    public void die(Character4 m) {
+    public void die(Character2 m) {
         if(alive) {
             getWorld().removeObject(m);
-            Level4Game.level4.stop();
+            Level2Game.level2.stop();
             lifelost.play();
             LifeLostScreen l = new LifeLostScreen();
             Greenfoot.setWorld(l);
