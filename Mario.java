@@ -139,6 +139,11 @@ public class Mario extends LevelPage
     private void enterLevel() {
         if(Greenfoot.isKeyDown("enter")) {
             GreenfootSound levelStart = new GreenfootSound("go.wav");
+            if (level==1){
+                Level1 world = new Level1();
+                Greenfoot.setWorld(world);
+                levelStart.play();
+            }
             if (level == 2){
                 Level2 world = new Level2();
                 Greenfoot.setWorld(world);
@@ -154,6 +159,16 @@ public class Mario extends LevelPage
                 Character4.counterr=0;
                 Greenfoot.setWorld(lesson4);
                 levelStart.play();
+            }
+            if(level == 5) {
+                Level5 world = new Level5();
+                Greenfoot.setWorld(world);
+                levelStart.play();
+            }
+            if(level==6) {
+                Level6 level6 = new Level6();
+                Character6.counterr=0;
+                Greenfoot.setWorld(level6);
             }
         }
     }
