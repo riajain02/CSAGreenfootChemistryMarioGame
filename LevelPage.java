@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class LevelPage extends Actor
 {
-    public static int levelsCompleted = 3;
+    public static int levelsCompleted = 6;
     
     /**
      * Act - do whatever the LevelPage wants to do. This method is called whenever

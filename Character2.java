@@ -1,123 +1,3 @@
-<<<<<<< HEAD
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-import java.util.List;
-
-/**
- * Write a description of class Character6 here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class Character2 extends Character
-{
-    private GreenfootImage image;
-    private int xCor;
-    private int yCor;
-    private int xVal;
-    private int type;
-    public static int counterr=0;
-    private boolean q1asked=false;
-    private boolean q2asked=false;
-    private boolean q3asked=false;
-    private boolean q4asked=false;
-    private boolean q5asked=false;
-    
-    public Character2(int x, int y, String imagePath) {
-        image = new GreenfootImage(imagePath);
-        image.scale(x,y);
-        setImage(image);
-        type=0;
-    }
-        
-    /**
-     * Act - do whatever the Character6 wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act() 
-    {
-        if(counterr==0) {
-            xVal=getX();
-            Level6Final.initiated=true;
-            counterr++;
-        }
-    }    
-    
-    public void run()
-    {
-            Animation.marioFront.scale(75,100);
-            Animation.marioSide.scale(75,100);
-            Animation.marioBack.scale(75,100);
-            Character4.marioFrontL.scale(75,100);
-            Character4.marioSideL.scale(75,100);
-            Character4.marioBackL.scale(75,100);
-            xCor=getX();
-            yCor=getY();
-            if(Greenfoot.isKeyDown("right")) {
-                int i=xCor;
-                xCor+=15;
-                if(i!=xCor && xCor!=764) {
-                    xVal+=15;
-                }
-                 if(type==0) {
-                    setImage(Animation.marioFront);
-                    type=1;
-                }
-                else if(type==1) {
-                    setImage(Animation.marioSide);
-                    type=2;
-                }
-                else if(type==2) {
-                    setImage(Animation.marioBack);
-                    type=3;
-                }
-                else if(type==3) {
-                    setImage(Animation.marioSide);
-                    type=0;
-                }
-                checkTouching();
-                setLocation(xCor,yCor);
-                Greenfoot.delay(3);
-            }
-            else if(Greenfoot.isKeyDown("left")) {
-                int i=xCor;
-                xCor-=15;
-                if(i!=xCor && xCor>=764) {
-                    xVal-=15;
-                }
-                xVal-=15;
-                if(type==0) {
-                    setImage(Character4.marioFrontL);
-                    type=1;
-                }
-                else if(type==1) {
-                    setImage(Character4.marioSideL);
-                    type=2;
-                }
-                else if(type==2) {
-                    setImage(Character4.marioBackL);
-                    type=3;
-                }
-                else if(type==3) {
-                    setImage(Character4.marioSideL);
-                    type=0;
-                }
-                checkTouching();
-                setLocation(xCor,yCor);
-                Greenfoot.delay(3);
-            }
-            else if(Greenfoot.isKeyDown("up")) {
-                setImage(image);
-                Character4.jump.play();
-                checkTouching();
-                for(int i=0;i<20;i++) {
-                    yCor-=10;
-                    checkTouching();
-                    Greenfoot.delay(1);
-                    setLocation(xCor,yCor);
-                }
-                while(getY()<250) {
-                    yCor+=10;
-=======
     import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
     import java.util.List;
     
@@ -300,7 +180,6 @@ public class Character2 extends Character
                     setBottomYCor();
                     yCor+=10;
                     yVal-=10;
->>>>>>> f6e45d2f51750db02e103ab30ac97b184f21c850
                     checkTouching();
                     Greenfoot.delay(1);
                     setLocation(xCor,yCor);
@@ -315,22 +194,6 @@ public class Character2 extends Character
             }
             if(Greenfoot.isKeyDown("up")&&Greenfoot.isKeyDown("right")) {
                 setImage(Animation.marioSide);
-<<<<<<< HEAD
-                Character4.jump.play();
-                for(int i=0;i<20;i++) {
-                    yCor-=10;
-                    xCor+=9;
-                    xVal+=9;
-                    setLocation(xCor,yCor);
-                    checkTouching();
-                    Greenfoot.delay(1);
-                }
-                if(getWorld().getObjects(Character6.class).size()>0) {
-                    while(getY()<250) {
-                        yCor+=10;
-                        xCor+=9;
-                        xVal+=9;
-=======
                 jump.play();
                 setBottomYCor();
                 if(blocks) {
@@ -350,14 +213,11 @@ public class Character2 extends Character
                         xCor+=4;
                         xVal+=4;
                         yVal+=10;
->>>>>>> f6e45d2f51750db02e103ab30ac97b184f21c850
                         checkTouching();
                         Greenfoot.delay(1);
                         setLocation(xCor,yCor);
                     }
                 }
-<<<<<<< HEAD
-=======
                 else {
                     for(int i=0;i<20;i++) {
                         yCor-=10;
@@ -382,44 +242,10 @@ public class Character2 extends Character
                         }
                     }
                 }
->>>>>>> f6e45d2f51750db02e103ab30ac97b184f21c850
                 setImage(image);
                 type=0;
             }
             else if(Greenfoot.isKeyDown("up")&&Greenfoot.isKeyDown("left")) {
-<<<<<<< HEAD
-                setImage(Character4.marioSideL);
-                Character4.jump.play();
-                for(int i=0;i<20;i++) {
-                    yCor-=10;
-                    xCor-=9;
-                    xVal-=9;
-                    setLocation(xCor,yCor);
-                    checkTouching();
-                    Greenfoot.delay(1);
-                }
-                while(getY()<250) {
-                    yCor+=10;
-                    xCor-=9;
-                    xVal-=9;
-                    checkTouching();
-                    Greenfoot.delay(1);
-                    setLocation(xCor,yCor);
-                }
-            setImage(image);
-            type=0;
-            checkTouching();
-        }
-        if(getWorld().getObjects(Character6.class)!=null) {
-            if(getWorld().getObjects(Character6.class).size()>0) {
-                while(getY()<250) {
-                    yCor+=10;
-                    xCor+=4;
-                    xVal+=4;
-                    checkTouching();
-                    Greenfoot.delay(1);
-                    setLocation(xCor,yCor);
-=======
                 setImage(marioSideL);
                 jump.play();
                 setBottomYCor();
@@ -484,50 +310,10 @@ public class Character2 extends Character
                         Greenfoot.delay(1);
                         setLocation(xCor,yCor);
                     }
->>>>>>> f6e45d2f51750db02e103ab30ac97b184f21c850
                 }
             }
         }
     }
-    
-<<<<<<< HEAD
-    public void checkTouching()
-    {
-        if(Level6Final.initiated) {
-            super.act();
-            gameOver();
-        }
-    }
-    
-    public void levelCompleted()
-    {
-        Level6Final.level6sound.stop();
-        GreenfootSound worldclear = new GreenfootSound("worldclear.mp3");
-        worldclear.play();
-        Greenfoot.delay(300);
-        getWorld().removeObject(Level6Final.m);
-        GameWon g = new GameWon();
-        Greenfoot.setWorld(g);
-        LevelPage.levelsCompleted=6;       
-    }
-    
-    public void gameOver() {
-        if(Levels.numLives<=0) {
-            GameOver g = new GameOver();
-            Greenfoot.setWorld(g);
-=======
-    /*public void touchingBrick(BrickBlock b)
-    {
-        if(intersects(b) && (getY()-95/2)<=320 && (getY()-95/2)>=300) {
-            if(b.blockHit==false) {
-               brickHit.scale(40,40);
-               b.setImage(brickHit);
-               bump.play();
-            }
-            b.blockHit=true;
-        }
-    }
-    */
     
     public void touchingCoin(Coin c)
     {
@@ -545,9 +331,7 @@ public class Character2 extends Character
             }
         }
     }
-    
    
-    
     public void checkTouching()
     {
         if(Level2Game.initialized) {
@@ -556,35 +340,15 @@ public class Character2 extends Character
                     touchingCoin(c);
                 }
             }
-            /*if(bricks!=null) {
-                for(BrickBlock b : bricks) {
-                    touchingBrick(b);
-                }
-            }
-            /*if(qBlocks!=null) {
-                for(QuestionBlock q : qBlocks) {
-                    touchingQBlock(q,q.powerUpType);
-                }
-            }
-            if(powerups!=null) {
-                for(PowerUps p : powerups) {
-                    powerUps(p);
-                }
-            }
-            */
-            //fall(Level2Game.m);
-            //smash();
-            if(alive && getWorld().getObjects(Spiny.class).size()>0) {
-                if (((xVal > (2250-20) && xVal <= 2250) || (xVal > (2800-20) && xVal <=2800)||(xVal > (3050-20) && xVal <=3050)||(xVal > (3300-20) && xVal <=3300)) && getY()<400) { {
+            if(alive /*&& getWorld().getObjects(Spiny.class).size()>0*/) {
+                if (((xVal > (2250-20) && xVal <= 2250) || (xVal > (2800-20) && xVal <=2800)||(xVal > (3050-20) && xVal <=3050)||(xVal > (3300-20) && xVal <=3300)) && getY()<400){
                     die(Level2Game.m);
                 }
             }
             levelCompleted();
             gameOver();
-            
         }
     }
-}
     
     public void setBottomYCor()
     {
@@ -611,66 +375,6 @@ public class Character2 extends Character
             minYCor=369-95/2;
         }
     }
-    
-    /*public void fall(Character2 m) {
-        if(intersects(Level4Game.hole)&& xVal>1600 && xVal<1660) {
-            setImage(image);
-            while(getY()<500) {
-                yCor+=15;
-                setLocation(xCor,yCor);
-                Greenfoot.delay(3);
-            }
-            die(m);
-        }
-    }
-    */
-    
-    /*public void spiny()
-    {
-        if(xVal>2700&&xVal<2900 && spinyCounter) {
-            y=Level2Game.spiny1.getY();
-            spiny.play();
-            while(y<430) {
-                y+=16;
-                run(15);
-                Level2Game.spiny1.setLocation(Level2Game.spiny1.getX(),y);
-                if(intersects(Level2Game.spiny1)) {
-                    die(Level2Game.m);
-                }
-                Greenfoot.delay(1);
-            }
-            spinyCounter=false;
-        }
-        else if(xVal>2950&&xVal<3150) {
-            y=Level2Game.spiny2.getY();
-            spiny.play();
-            while(y<430) {
-                y+=16;
-                run(15);
-                Level2Game.spiny2.setLocation(Level2Game.spiny2.getX(),y);
-                if(intersects(Level2Game.spiny2)) {
-                    die(Level2Game.m);
-                }
-                Greenfoot.delay(1);
-            }
-            spinyCounter=false;
-        }
-        else if(xVal>3200&&xVal<3400) {
-            y=Level2Game.spiny3.getY();
-            spiny.play();
-            while(y<430) {
-                y+=16;
-                run(15);
-                Level2Game.spiny3.setLocation(Level2Game.spiny3.getX(),y);
-                if(intersects(Level2Game.spiny3)) {
-                    die(Level2Game.m);
-                }
-                Greenfoot.delay(1);
-            }
-            spinyCounter=false;
-        }
-    }
-    */
     
     public void levelCompleted()
     {
@@ -753,7 +457,6 @@ public class Character2 extends Character
             GameOver g = new GameOver();
             Greenfoot.setWorld(g);
             alive=false;
->>>>>>> f6e45d2f51750db02e103ab30ac97b184f21c850
         }
     }
 }
