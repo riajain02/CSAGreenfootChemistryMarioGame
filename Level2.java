@@ -93,6 +93,7 @@ public class Level2 extends World
         else if (numEnters == 9){
             Level2Game lvl2 = new Level2Game();
             Greenfoot.setWorld(lvl2);
+            numEnters = 11;
         }
     }
 }

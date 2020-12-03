@@ -33,11 +33,18 @@ public class Level3 extends World
             showText(null,175,60);
             setBackground("level3p1.png");
             Greenfoot.delay(100);
+<<<<<<< HEAD
             while (numEnters < 5){
                 if (Greenfoot.getKey() == "enter"){
                     numEnters++;
                     tutorial();
                 }
+=======
+        while (numEnters < 10){
+            if (Greenfoot.getKey() == "enter"){
+                numEnters++;
+                tutorial();
+>>>>>>> f6e45d2f51750db02e103ab30ac97b184f21c850
             }
         }
     }
@@ -63,6 +70,7 @@ public class Level3 extends World
         else if (numEnters == 4){
             Level3Game lvl3 = new Level3Game();
             Greenfoot.setWorld(lvl3);
+            numEnters = 10;
         }
     }
 }

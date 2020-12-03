@@ -21,10 +21,10 @@
         private GreenfootSound powerup = new GreenfootSound("powerup.mp3");
         private GreenfootSound oneup = new GreenfootSound("1-up.mp3");
         private GreenfootSound powerupappears = new GreenfootSound("power-up-appears.mp3");
-        public static GreenfootSound jump = new GreenfootSound("jump.wav");
+        private GreenfootSound jump = new GreenfootSound("jump.wav");
         private GreenfootSound smash = new GreenfootSound("smash.wav");
-        public static GreenfootSound lifelost = new GreenfootSound("life-lost.mp3");
-        public static GreenfootSound levelcompleted = new GreenfootSound("levelcomplete.wav");
+        private GreenfootSound lifelost = new GreenfootSound("life-lost.mp3");
+        private GreenfootSound levelcompleted = new GreenfootSound("levelcomplete.wav");
         private boolean touching=false;
         private static int counter=0;
         public static List<Coin> coins;
@@ -37,9 +37,9 @@
         public static RedMushroom redM1;
         public static GreenMushroom greenM1;
         private int powerUpCounter=0;
-        public static GreenfootImage marioFrontL = new GreenfootImage("mariorunfrontL.png");
-        public static GreenfootImage marioBackL = new GreenfootImage("mariorunbackL.png");
-        public static GreenfootImage marioSideL = new GreenfootImage("mariostraightL.png");
+        private GreenfootImage marioFrontL = new GreenfootImage("mariorunfrontL.png");
+        private GreenfootImage marioBackL = new GreenfootImage("mariorunbackL.png");
+        private GreenfootImage marioSideL = new GreenfootImage("mariostraightL.png");
         private static boolean xLim=false;
         public static boolean alive=true;
         public static int counterr=0;
@@ -525,25 +525,26 @@
                         System.out.println();
                         while(xVal<3750) {
                             x+=15;
-                            if(type2==0) {
+                            if(type==0) {
                                 setImage(Animation.marioFront);
                                 type2=1;
                             }
-                            else if(type2==1) {
+                            else if(type==1) {
                                 setImage(Animation.marioSide);
                                 type2=2;
                             }
-                            else if(type2==2) {
+                            else if(type==2) {
                                 setImage(Animation.marioBack);
                                 type2=3;
                             }
-                            else if(type2==3) {
+                            else if(type==3) {
                                 setImage(Animation.marioSide);
                                 type2=0;
                             }
                             setLocation(x,410);
                             Greenfoot.delay(3);
                         }
+                        getWorld().removeObject(Level4Game.m);
                         Levels a = new Levels();
                         Greenfoot.setWorld(a);
                         if(LevelPage.levelsCompleted<4) {
@@ -566,6 +567,7 @@
     
     public void die(Character4 m) {
         if(alive) {
+            getWorld().removeObject(m);
             Level4Game.level4.stop();
             lifelost.play();
             LifeLostScreen l = new LifeLostScreen();

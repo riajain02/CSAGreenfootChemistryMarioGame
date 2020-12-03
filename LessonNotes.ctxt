@@ -4,8 +4,14 @@ comment0.text=\n\ Write\ a\ description\ of\ class\ LessonNotes\ here.\n\ \n\ @a
 comment1.params=image
 comment1.target=LessonNotes(java.lang.String)
 comment1.text=\n\ Act\ -\ do\ whatever\ the\ LessonNotes\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
+<<<<<<< HEAD
 comment2.params=image
 comment2.target=LessonNotes(greenfoot.GreenfootImage)
 comment3.params=
 comment3.target=void\ act()
 numComments=4
+=======
+comment2.params=
+comment2.target=void\ act()
+numComments=3
+>>>>>>> f6e45d2f51750db02e103ab30ac97b184f21c850
