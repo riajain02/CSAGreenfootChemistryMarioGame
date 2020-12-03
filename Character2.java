@@ -374,7 +374,7 @@
             //fall(Level2Game.m);
             //smash();
             if(alive && getWorld().getObjects(Spiny.class).size()>0) {
-                if((intersects(Level2Game.spiny1)||intersects(Level2Game.spiny2)||intersects(Level2Game.spiny3) ||intersects(Level2Game.spiny4)) && getY()<400) {
+                if (((xVal > (2250-20) && xVal <= 2250) || (xVal > (2800-20) && xVal <=2800)||(xVal > (3050-20) && xVal <=3050)||(xVal > (3300-20) && xVal <=3300)) && getY()<400) { {
                     die(Level2Game.m);
                 }
             }
@@ -383,6 +383,7 @@
             
         }
     }
+}
     
     public void setBottomYCor()
     {

@@ -421,8 +421,9 @@
             //fall(Level4Game.m);
             //thwomp();
             if(alive && getWorld().getObjects(Thwomp.class).size()>0) {
-                if((intersects(Level3Game.th1)||intersects(Level3Game.th2)||intersects(Level3Game.th3)) && getY()<400) {
-                    die(Level3Game.m);
+                //if((intersects(Level3Game.th1)||intersects(Level3Game.th2)||intersects(Level3Game.th3)) ){ //&& getY()<400) {
+                  if (((xVal > (2800-20) && xVal <=2800)||(xVal > (3050-20) && xVal <=3050)||(xVal > (3300-20) && xVal <=3300)) && getY()<200) {
+                   die(Level3Game.m);
                 }
             }
             //Greenfoot.delay(5)
