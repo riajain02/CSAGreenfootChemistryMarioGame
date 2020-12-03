@@ -4,8 +4,8 @@ import java.util.List;
 /**
  * Write a description of class Level4Game here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Ria Jain
+ * 1.0
  */
 public class Level4Game extends SWorld
 {

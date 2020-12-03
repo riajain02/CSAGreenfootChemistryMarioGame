@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Level2Game extends SWorld
 {
-    public static Character4 m = new Character4(50,75,"initialK.png");
+    public static Character2 m = new Character2(50,75,"initialK.png");
     /**
      * Constructor for objects of class Level2Game.
      * 
@@ -23,6 +23,6 @@ public class Level2Game extends SWorld
     
     public void act()
     {
-        m.run(15);
+        m.run();
     }
 }

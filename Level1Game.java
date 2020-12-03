@@ -4,8 +4,8 @@ import java.util.List;
 /**
  * Write a description of class Level1Game here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Ria Jain, Tinh-Phong Nguyen
+ * @version 1.0
  */
 public class Level1Game extends SWorld
 {
@@ -93,7 +93,6 @@ public class Level1Game extends SWorld
         addObject(goomba2,3300,(410+95/2)-64/2);
         addObject(endflag,3550,410+95/2-96*3/2);
         Levels.map.stop();
-        //Home.playMusic(level4);
         mar.setLocation(100,410);
         initialized=true;
     }

@@ -479,8 +479,6 @@
                         int x=getX();
                         int type2=0;
                         System.out.println();
-                        
-                        getWorld().removeObject(Level1Game.mar);
                         Levels a = new Levels();
                         Greenfoot.setWorld(a);
                         if(LevelPage.levelsCompleted<1) {
@@ -503,7 +501,6 @@
     
     public void die(Character1 m) {
         if(alive) {
-            getWorld().removeObject(m);
             Level1Game.level1.stop();
             lifelost.play();
             LifeLostScreen l = new LifeLostScreen();

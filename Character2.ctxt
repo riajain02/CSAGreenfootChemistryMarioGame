@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Character2
+comment0.text=\n\ Write\ a\ description\ of\ class\ Character6\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=x\ y\ imagePath
+comment1.target=Character2(int,\ int,\ java.lang.String)
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\n\ Act\ -\ do\ whatever\ the\ Character6\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
+comment3.params=
+comment3.target=void\ run()
+comment4.params=
+comment4.target=void\ checkTouching()
+comment5.params=
+comment5.target=void\ levelCompleted()
+comment6.params=
+comment6.target=void\ gameOver()
+numComments=7

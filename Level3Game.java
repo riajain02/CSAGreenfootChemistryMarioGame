@@ -17,8 +17,8 @@ public class Level3Game extends SWorld
     {
         super(750, 500, 1, 2250);
         GreenfootImage level4background = new GreenfootImage("backgroundtest.png");
-        setScrollingBackground(level4background);
         addMainActor(m,375,250,450,500);
+        setScrollingBackground(level4background);
     }
     
     public void act()

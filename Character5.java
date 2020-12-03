@@ -366,7 +366,6 @@
                }
                else if(x==3) {
                    PowerUps p=new RedMushroom();
-                   System.out.println(q.getX()+" "+(q.getY()-35));
                    getWorld().addObject(p,1925,300-35);
                    powerupappears.play();
                    powerUpCounter++;
@@ -527,8 +526,7 @@
                         Greenfoot.delay(100);
                         int x=getX();
                         int type2=0;
-                        System.out.println();
-                        while(xVal<3750) {
+                        for(int i=0;i<24;i++) {
                             x+=15;
                             if(type==0) {
                                 setImage(Animation.marioFront);
@@ -549,7 +547,6 @@
                             setLocation(x,410);
                             Greenfoot.delay(3);
                         }
-                        getWorld().removeObject(Level5Game.mari);
                         Levels a = new Levels();
                         Greenfoot.setWorld(a);
                         if(LevelPage.levelsCompleted<4) {
@@ -572,7 +569,6 @@
     
     public void die(Character5 m) {
         if(alive) {
-            getWorld().removeObject(m);
             Level5Game.level5.stop();
             lifelost.play();
             LifeLostScreen l = new LifeLostScreen();
