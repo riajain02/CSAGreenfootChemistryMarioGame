@@ -7,7 +7,7 @@
      * @author (your name) 
      * @version (a version number or a date)
      */
-    public class Character1 extends Character
+    public class Character5 extends Character
     {
         public GreenfootImage image;
         public int xCor;
@@ -46,13 +46,13 @@
         private int y;
         private boolean smashCounter=true;
         
-        public Character1(int x, int y, String imagePath) {
+        public Character5(int x, int y, String imagePath) {
             image = new GreenfootImage(imagePath);
             image.scale(x,y);
             setImage(image);
         }
         
-        public Character1(GreenfootImage image) {
+        public Character5(GreenfootImage image) {
             setImage(image);
         }
         
@@ -67,7 +67,7 @@
                 yVal=getY(); 
                 counterr++; 
                 counter=0; 
-                Level1Game.numCoins=0;
+                Level5Game.numCoins=0;
                 smashCounter=true;
                 coins=getWorld().getObjects(Coin.class);
                 for(Coin c : coins) {
@@ -88,7 +88,7 @@
             xCor=getX();
             yCor=getY();
             if(Greenfoot.isKeyDown("right")) {
-                if((!intersects(Level1Game.tubeS)||xVal>770)&&(!intersects(Level1Game.tubeM)||xVal>970)&&(!intersects(Level1Game.tubeL)||xVal>1170)&&(!intersects(Level1Game.tubeM2)||xVal>1370)&&(!intersects(Level1Game.tubeL2)||xVal>2570)) {
+                if((!intersects(Level5Game.tubeS)||xVal>770)&&(!intersects(Level5Game.tubeM)||xVal>970)&&(!intersects(Level5Game.tubeM2)||xVal>1370)){
                     int i=xCor;
                     xCor+=x;
                     if(i!=xCor && xCor!=764) {
@@ -117,7 +117,7 @@
                 else {setImage(image);}
             }
             else if(Greenfoot.isKeyDown("left")) {
-                if((!intersects(Level1Game.tubeS)||xVal<730)&&(!intersects(Level1Game.tubeM)||xVal<930)&&(!intersects(Level1Game.tubeL)||xVal<1130)&&(!intersects(Level1Game.tubeM2)||xVal<1330)&&(!intersects(Level1Game.tubeM2)||xVal>1370)&&(!intersects(Level1Game.tubeL2)||xVal>2570)) {
+                if((!intersects(Level5Game.tubeS)||xVal<730)&&(!intersects(Level5Game.tubeM)||xVal<930)&&(!intersects(Level5Game.tubeM2)||xVal<1330)&&(!intersects(Level5Game.tubeM2)||xVal>1370)) {
                     int i=xCor;
                     xCor-=x;
                     if(i!=xCor && xCor>=764) {
@@ -229,7 +229,7 @@
                         Greenfoot.delay(1);
                     }
                     setBottomYCor();
-                    if(getWorld().getObjects(Character1.class).size()>0) {
+                    if(getWorld().getObjects(Character5.class).size()>0) {
                         while((getY()+(95/2)<minYCor)) {
                             setBottomYCor();
                             yCor+=10;
@@ -297,8 +297,8 @@
             type=0;
         }
         setBottomYCor();
-        if(getWorld().getObjects(Character1.class)!=null) {
-            if(getWorld().getObjects(Character1.class).size()>0) {
+        if(getWorld().getObjects(Character5.class)!=null) {
+            if(getWorld().getObjects(Character5.class).size()>0) {
                 if(alive) {
                     while(getY()+95/2<minYCor) {
                         setBottomYCor();
@@ -339,7 +339,7 @@
                 c.coinRemoved=true;
                 touching=true;
                 coin.play();
-                Level1Game.numCoins++;
+                Level5Game.numCoins++;
             }
         }
     }
@@ -393,7 +393,7 @@
     
     public void checkTouching()
     {
-        if(Level1Game.initialized) {
+        if(Level5Game.initialized) {
             if(coins!=null) {
                 for(Coin c : coins) {
                     touchingCoin(c);
@@ -414,11 +414,16 @@
                     powerUps(p);
                 }
             }
-            fall(Level1Game.mar);
-           
+            fall(Level5Game.mari);
+            smash();
+            if(alive && getWorld().getObjects(Smasher.class).size()>0) {
+                if(intersects(Level5Game.smasher1)||intersects(Level5Game.smasher2)||intersects(Level5Game.smasher3) && getY()<400) {
+                    die(Level5Game.mari);
+                }
+            }
             if(alive && getWorld().getObjects(Goomba.class).size()>0) {
-                if(intersects(Level1Game.goomba1)||intersects(Level1Game.goomba2)&& getY()<400) {
-                    die(Level1Game.mar);
+                if(intersects(Level5Game.goomba1)||intersects(Level5Game.goomba2)&& getY()<400) {
+                    die(Level5Game.mari);
                 }
             }
             levelCompleted();
@@ -452,44 +457,108 @@
         }
     }
     
-    public void fall(Character1 mar) {
-        if(intersects(Level1Game.hole)&& xVal>1600 && xVal<1660) {
+    public void fall(Character5 m) {
+        if(intersects(Level5Game.hole)&& xVal>1600 && xVal<1660) {
             setImage(image);
             while(getY()<500) {
                 yCor+=15;
                 setLocation(xCor,yCor);
                 Greenfoot.delay(3);
             }
-            die(mar);
+            die(m);
         }
-        smashCounter=false;
     }
     
+    public void smash()
+    {
+        if(xVal>2700&&xVal<2900 && smashCounter) {
+            y=Level5Game.smasher1.getY();
+            smash.play();
+            while(y<430) {
+                y+=16;
+                run(15);
+                Level5Game.smasher1.setLocation(Level5Game.smasher1.getX(),y);
+                if(intersects(Level5Game.smasher1)) {
+                    die(Level5Game.mari);
+                }
+                Greenfoot.delay(1);
+            }
+            smashCounter=false;
+        }
+        else if(xVal>2950&&xVal<3150) {
+            y=Level5Game.smasher2.getY();
+            smash.play();
+            while(y<430) {
+                y+=16;
+                run(15);
+                Level5Game.smasher2.setLocation(Level5Game.smasher2.getX(),y);
+                if(intersects(Level5Game.smasher2)) {
+                    die(Level5Game.mari);
+                }
+                Greenfoot.delay(1);
+            }
+            smashCounter=false;
+        }
+        else if(xVal>3200&&xVal<3400) {
+            y=Level5Game.smasher3.getY();
+            smash.play();
+            while(y<430) {
+                y+=16;
+                run(15);
+                Level5Game.smasher3.setLocation(Level5Game.smasher3.getX(),y);
+                if(intersects(Level5Game.smasher3)) {
+                    die(Level5Game.mari);
+                }
+                Greenfoot.delay(1);
+            }
+            smashCounter=false;
+        }
+    }
     
     public void levelCompleted()
     {
         if(getWorld().getObjects(EndFlag.class)!=null) {
             if(getWorld().getObjects(EndFlag.class).size()>0) {
-                if(intersects(Level1Game.endflag)) {
-                    if(Level1Game.numCoins>=10) {
-                        Level1Game.level1.stop();
+                if(intersects(Level5Game.endflag)) {
+                    if(Level5Game.numCoins>=10) {
+                        Level5Game.level5.stop();
                         levelcompleted.play();
                         setImage(image);
                         Greenfoot.delay(100);
                         int x=getX();
                         int type2=0;
                         System.out.println();
-                        
-                        getWorld().removeObject(Level1Game.mar);
+                        while(xVal<3750) {
+                            x+=15;
+                            if(type==0) {
+                                setImage(Animation.marioFront);
+                                type2=1;
+                            }
+                            else if(type==1) {
+                                setImage(Animation.marioSide);
+                                type2=2;
+                            }
+                            else if(type==2) {
+                                setImage(Animation.marioBack);
+                                type2=3;
+                            }
+                            else if(type==3) {
+                                setImage(Animation.marioSide);
+                                type2=0;
+                            }
+                            setLocation(x,410);
+                            Greenfoot.delay(3);
+                        }
+                        getWorld().removeObject(Level5Game.mari);
                         Levels a = new Levels();
                         Greenfoot.setWorld(a);
-                        if(LevelPage.levelsCompleted<1) {
-                            LevelPage.levelsCompleted=1;
+                        if(LevelPage.levelsCompleted<4) {
+                            LevelPage.levelsCompleted=4;
                         }
                         Levels.numTotCoins+=10;
                     }
                     else {
-                        Level1Game.level1.stop();
+                        Level5Game.level5.stop();
                         NotEnoughCoins n=new NotEnoughCoins();
                         Greenfoot.setWorld(n);
                         Greenfoot.delay(500);
@@ -501,10 +570,10 @@
         }
     }
     
-    public void die(Character1 m) {
+    public void die(Character5 m) {
         if(alive) {
             getWorld().removeObject(m);
-            Level1Game.level1.stop();
+            Level5Game.level5.stop();
             lifelost.play();
             LifeLostScreen l = new LifeLostScreen();
             Greenfoot.setWorld(l);
