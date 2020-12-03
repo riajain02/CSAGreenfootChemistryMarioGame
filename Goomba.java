@@ -12,7 +12,7 @@ public class Goomba extends Obstacles
     
     public Goomba()
     {
-        goomba.scale(20,20);
+        goomba.scale(30,30);
         setImage(goomba);
     }
     

@@ -29,7 +29,7 @@ public class Level3 extends World
             Greenfoot.delay(220);
             setBackground("level3p1.png");
             Greenfoot.delay(100);
-        while (numEnters < 10){
+        while (numEnters < 5){
             if (Greenfoot.getKey() == "enter"){
                 numEnters++;
                 tutorial();
