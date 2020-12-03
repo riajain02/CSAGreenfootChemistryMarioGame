@@ -5,6 +5,7 @@ dependency1.from=Home
 dependency1.to=Button
 dependency1.type=UsesDependency
 <<<<<<< HEAD
+<<<<<<< HEAD
 dependency10.from=Level4Game
 dependency10.to=Character
 dependency10.type=UsesDependency
@@ -68,10 +69,42 @@ dependency18.type=UsesDependency
 dependency19.from=Level4Game
 dependency19.to=Character4
 >>>>>>> 59b2a6be7b29b6bc5e68093ad1d4bfd2486b03ac
+=======
+dependency10.from=Levels
+dependency10.to=Path
+dependency10.type=UsesDependency
+dependency11.from=Levels
+dependency11.to=Animation
+dependency11.type=UsesDependency
+dependency12.from=Levels
+dependency12.to=Home
+dependency12.type=UsesDependency
+dependency13.from=Animation
+dependency13.to=Character
+dependency13.type=UsesDependency
+dependency14.from=Animation
+dependency14.to=Button
+dependency14.type=UsesDependency
+dependency15.from=Animation
+dependency15.to=Levels
+dependency15.type=UsesDependency
+dependency16.from=Animation
+dependency16.to=Home
+dependency16.type=UsesDependency
+dependency17.from=Level3
+dependency17.to=LessonNotes
+dependency17.type=UsesDependency
+dependency18.from=Level3
+dependency18.to=Level3Game
+dependency18.type=UsesDependency
+dependency19.from=Home
+dependency19.to=Button
+>>>>>>> 0908f0816ca0b3b3622cf4279360e67dd37723a4
 dependency19.type=UsesDependency
 dependency2.from=Home
 dependency2.to=Animation
 dependency2.type=UsesDependency
+<<<<<<< HEAD
 <<<<<<< HEAD
 dependency20.from=Level6Final
 dependency20.to=Levels
@@ -133,10 +166,42 @@ dependency28.type=UsesDependency
 dependency29.from=Level4Game
 dependency29.to=EndFlag
 >>>>>>> 59b2a6be7b29b6bc5e68093ad1d4bfd2486b03ac
+=======
+dependency20.from=Home
+dependency20.to=Animation
+dependency20.type=UsesDependency
+dependency21.from=Level5Game
+dependency21.to=Character
+dependency21.type=UsesDependency
+dependency22.from=Level3Game
+dependency22.to=Character
+dependency22.type=UsesDependency
+dependency23.from=Level4Game
+dependency23.to=Character
+dependency23.type=UsesDependency
+dependency24.from=Level4Game
+dependency24.to=Obstacles
+dependency24.type=UsesDependency
+dependency25.from=Level4Game
+dependency25.to=Levels
+dependency25.type=UsesDependency
+dependency26.from=Level4Game
+dependency26.to=Home
+dependency26.type=UsesDependency
+dependency27.from=Level2Game
+dependency27.to=Character
+dependency27.type=UsesDependency
+dependency28.from=Character
+dependency28.to=Animation
+dependency28.type=UsesDependency
+dependency29.from=Character
+dependency29.to=Level4Game
+>>>>>>> 0908f0816ca0b3b3622cf4279360e67dd37723a4
 dependency29.type=UsesDependency
 dependency3.from=Level3Game
 dependency3.to=Character4
 dependency3.type=UsesDependency
+<<<<<<< HEAD
 <<<<<<< HEAD
 dependency30.from=Level4
 dependency30.to=Level4Game
@@ -562,6 +627,51 @@ height=1096
 package.numDependencies=100
 package.numTargets=38
 >>>>>>> 59b2a6be7b29b6bc5e68093ad1d4bfd2486b03ac
+=======
+dependency30.from=Mario
+dependency30.to=Level2
+dependency30.type=UsesDependency
+dependency31.from=Mario
+dependency31.to=Level3
+dependency31.type=UsesDependency
+dependency32.from=Mario
+dependency32.to=Level4Game
+dependency32.type=UsesDependency
+dependency33.from=Mario
+dependency33.to=Level5
+dependency33.type=UsesDependency
+dependency34.from=Level
+dependency34.to=Levels
+dependency34.type=UsesDependency
+dependency35.from=Electron
+dependency35.to=Level4
+dependency35.type=UsesDependency
+dependency4.from=Level5
+dependency4.to=LessonNotes
+dependency4.type=UsesDependency
+dependency5.from=Level5
+dependency5.to=Level5Game
+dependency5.type=UsesDependency
+dependency6.from=Level2
+dependency6.to=LessonNotes
+dependency6.type=UsesDependency
+dependency7.from=Level2
+dependency7.to=Level2Game
+dependency7.type=UsesDependency
+dependency8.from=Levels
+dependency8.to=Level
+dependency8.type=UsesDependency
+dependency9.from=Levels
+dependency9.to=Mario
+dependency9.type=UsesDependency
+editor.fx.0.height=0
+editor.fx.0.width=0
+editor.fx.0.x=0
+editor.fx.0.y=0
+height=775
+package.numDependencies=35
+package.numTargets=22
+>>>>>>> 0908f0816ca0b3b3622cf4279360e67dd37723a4
 project.charset=UTF-8
 publish.hasSource=false
 publish.locked=true
@@ -584,27 +694,40 @@ target1.width=90
 target1.x=0
 target1.y=0
 target10.height=50
+<<<<<<< HEAD
 target10.name=BrickBlock
+=======
+target10.name=Obstacles
+>>>>>>> 0908f0816ca0b3b3622cf4279360e67dd37723a4
 target10.showInterface=false
 target10.type=ClassTarget
 target10.width=80
 target10.x=0
 target10.y=0
 target11.height=50
+<<<<<<< HEAD
 target11.name=PowerUps
+=======
+target11.name=Button
+>>>>>>> 0908f0816ca0b3b3622cf4279360e67dd37723a4
 target11.showInterface=false
 target11.type=ClassTarget
 target11.width=80
 target11.x=0
 target11.y=0
 target12.height=50
+<<<<<<< HEAD
 target12.name=Button
+=======
+target12.name=Level4Game
+>>>>>>> 0908f0816ca0b3b3622cf4279360e67dd37723a4
 target12.showInterface=false
 target12.type=ClassTarget
 target12.width=80
 target12.x=0
 target12.y=0
 target13.height=50
+<<<<<<< HEAD
 <<<<<<< HEAD
 target13.name=Level4Game
 target13.showInterface=false
@@ -637,6 +760,9 @@ target17.height=50
 target17.name=Electron
 =======
 target13.name=PowerUps
+=======
+target13.name=Electron
+>>>>>>> 0908f0816ca0b3b3622cf4279360e67dd37723a4
 target13.showInterface=false
 target13.type=ClassTarget
 target13.width=80
@@ -650,22 +776,34 @@ target14.width=90
 target14.x=0
 target14.y=0
 target15.height=50
+<<<<<<< HEAD
 target15.name=Electron
+=======
+target15.name=Level2
+>>>>>>> 0908f0816ca0b3b3622cf4279360e67dd37723a4
 target15.showInterface=false
 target15.type=ClassTarget
 target15.width=80
 target15.x=0
 target15.y=0
 target16.height=50
+<<<<<<< HEAD
 target16.name=NotEnoughCoins
+=======
+target16.name=Levels
+>>>>>>> 0908f0816ca0b3b3622cf4279360e67dd37723a4
 target16.showInterface=false
 target16.type=ClassTarget
 target16.width=120
 target16.x=0
 target16.y=0
 target17.height=50
+<<<<<<< HEAD
 target17.name=Tubes
 >>>>>>> 59b2a6be7b29b6bc5e68093ad1d4bfd2486b03ac
+=======
+target17.name=Animation
+>>>>>>> 0908f0816ca0b3b3622cf4279360e67dd37723a4
 target17.showInterface=false
 target17.type=ClassTarget
 target17.width=80
@@ -673,21 +811,29 @@ target17.x=0
 target17.y=0
 target18.height=50
 <<<<<<< HEAD
+<<<<<<< HEAD
 target18.name=ChlorineBox
 =======
 target18.name=Smasher
 >>>>>>> 59b2a6be7b29b6bc5e68093ad1d4bfd2486b03ac
+=======
+target18.name=Level3
+>>>>>>> 0908f0816ca0b3b3622cf4279360e67dd37723a4
 target18.showInterface=false
 target18.type=ClassTarget
-target18.width=90
+target18.width=80
 target18.x=0
 target18.y=0
 target19.height=50
+<<<<<<< HEAD
 <<<<<<< HEAD
 target19.name=Tubes
 =======
 target19.name=Goomba
 >>>>>>> 59b2a6be7b29b6bc5e68093ad1d4bfd2486b03ac
+=======
+target19.name=Level
+>>>>>>> 0908f0816ca0b3b3622cf4279360e67dd37723a4
 target19.showInterface=false
 target19.type=ClassTarget
 target19.width=80
@@ -702,6 +848,7 @@ target2.width=100
 target2.x=0
 target2.y=0
 target20.height=50
+<<<<<<< HEAD
 target20.name=Smasher
 =======
 target2.name=Character1
@@ -713,17 +860,24 @@ target2.y=0
 target20.height=50
 target20.name=Home
 >>>>>>> 59b2a6be7b29b6bc5e68093ad1d4bfd2486b03ac
+=======
+target20.name=Level2Game
+>>>>>>> 0908f0816ca0b3b3622cf4279360e67dd37723a4
 target20.showInterface=false
 target20.type=ClassTarget
-target20.width=80
+target20.width=90
 target20.x=0
 target20.y=0
 target21.height=50
+<<<<<<< HEAD
 <<<<<<< HEAD
 target21.name=Home
 =======
 target21.name=SWorld
 >>>>>>> 59b2a6be7b29b6bc5e68093ad1d4bfd2486b03ac
+=======
+target21.name=Home
+>>>>>>> 0908f0816ca0b3b3622cf4279360e67dd37723a4
 target21.showInterface=false
 target21.type=ClassTarget
 target21.width=80
@@ -731,15 +885,20 @@ target21.x=0
 target21.y=0
 target22.height=50
 <<<<<<< HEAD
+<<<<<<< HEAD
 target22.name=SWorld
 =======
 target22.name=Path
 >>>>>>> 59b2a6be7b29b6bc5e68093ad1d4bfd2486b03ac
+=======
+target22.name=SWorld
+>>>>>>> 0908f0816ca0b3b3622cf4279360e67dd37723a4
 target22.showInterface=false
 target22.type=ClassTarget
 target22.width=80
 target22.x=0
 target22.y=0
+<<<<<<< HEAD
 target23.height=50
 <<<<<<< HEAD
 target23.name=Path
@@ -817,6 +976,8 @@ target29.type=ClassTarget
 target29.width=90
 target29.x=0
 target29.y=0
+=======
+>>>>>>> 0908f0816ca0b3b3622cf4279360e67dd37723a4
 target3.height=50
 target3.name=Character4
 target3.showInterface=false
@@ -962,28 +1123,40 @@ target40.width=100
 target40.x=0
 target40.y=0
 target5.height=50
+<<<<<<< HEAD
 target5.name=Mario
+=======
+target5.name=Level5Game
+>>>>>>> 0908f0816ca0b3b3622cf4279360e67dd37723a4
 target5.showInterface=false
 target5.type=ClassTarget
 target5.width=80
 target5.x=0
 target5.y=0
 target6.height=50
+<<<<<<< HEAD
 target6.name=Components
+=======
+target6.name=Level5
+>>>>>>> 0908f0816ca0b3b3622cf4279360e67dd37723a4
 target6.showInterface=false
 target6.type=ClassTarget
 target6.width=90
 target6.x=0
 target6.y=0
 target7.height=50
+<<<<<<< HEAD
 target7.name=Coin
+=======
+target7.name=Level3Game
+>>>>>>> 0908f0816ca0b3b3622cf4279360e67dd37723a4
 target7.showInterface=false
 target7.type=ClassTarget
-target7.width=80
+target7.width=90
 target7.x=0
 target7.y=0
 target8.height=50
-target8.name=Obstacles
+target8.name=LevelPage
 target8.showInterface=false
 target8.type=ClassTarget
 target8.width=80
@@ -1003,7 +1176,11 @@ xPosition=0
 yPosition=23
 =======
 target9.height=50
+<<<<<<< HEAD
 target9.name=Level1Game
+=======
+target9.name=Mario
+>>>>>>> 0908f0816ca0b3b3622cf4279360e67dd37723a4
 target9.showInterface=false
 target9.type=ClassTarget
 target9.width=90
