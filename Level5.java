@@ -29,16 +29,12 @@ public class Level5 extends World
             Greenfoot.delay(220);
             setBackground("level5p1.png");
             Greenfoot.delay(100);
-<<<<<<< HEAD
-         while (numEnters < 10){
-=======
-         while (numEnters < 7){
->>>>>>> e246bafc33a4a9fc596d202eaef79925b17deeeb
+        }
+        while (numEnters < 7){
             if (Greenfoot.getKey() == "enter"){
                 numEnters++;
                 tutorial();
             }
-        }
         }
     }
     
@@ -69,15 +65,11 @@ public class Level5 extends World
             }
             removeObject(page1);
             addObject(page2,380,270);
-<<<<<<< HEAD
             Greenfoot.delay(25);
-=======
->>>>>>> e246bafc33a4a9fc596d202eaef79925b17deeeb
         }
         else if (numEnters == 6){
             Level5Game lvl5 = new Level5Game();
             Greenfoot.setWorld(lvl5);
         }
     }
-    
 }

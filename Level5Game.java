@@ -1,33 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-<<<<<<< HEAD
-
-/**
- * Write a description of class Level2Game here.
-=======
 import java.util.List;
-
-/**
- * Write a description of class Level5Game here.
->>>>>>> e246bafc33a4a9fc596d202eaef79925b17deeeb
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class Level5Game extends SWorld
 {
-<<<<<<< HEAD
-    private Actor m = new Character(50,75,"initialK.png");
-    /**
-     * Constructor for objects of class Level2Game.
-     * 
-     */
-    public Level5Game()
-    {
-        super(750, 500, 1, 2250);
-        GreenfootImage level4background = new GreenfootImage("backgroundtest.png");
-        setScrollingBackground(level4background);
-        addMainActor(m,375,250,450,500);
-=======
     public static Character5 mari = new Character5(65,95,"initialK.png");
     public static BrickBlock brickBlock;
     public static BrickBlock brickBlock2;
@@ -64,15 +38,15 @@ public class Level5Game extends SWorld
     public static Smasher smasher2 = new Smasher();
     public static Smasher smasher3 = new Smasher();
     public static EndFlag endflag = new EndFlag();
+    private Actor m = new Character5(50,75,"initialK.png");
     
     /**
-     * Constructor for objects of class Level5Game.
+     * Constructor for objects of class Level2Game.
      * 
      */
     public Level5Game()
-    {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(750, 500, 1, 3750);
+    {
+       super(750, 500, 1, 3750);
         GreenfootImage level4background = new GreenfootImage("cityskyline.png");
         Components ground = new Components("level4ground.png",3755,70);
         addObject(ground,3750/2,490);
@@ -114,17 +88,11 @@ public class Level5Game extends SWorld
         //Home.playMusic(level4);
         mari.setLocation(100,410);
         initialized=true;
->>>>>>> e246bafc33a4a9fc596d202eaef79925b17deeeb
     }
     
     public void act()
     {
-<<<<<<< HEAD
         //m.run();
-    }
-}
-
-=======
         if(initialized==false) {
             initialized=true;
         }
@@ -169,4 +137,3 @@ public class Level5Game extends SWorld
         return (double) Math.round(value * scale) / scale;
     }
 }
->>>>>>> e246bafc33a4a9fc596d202eaef79925b17deeeb
