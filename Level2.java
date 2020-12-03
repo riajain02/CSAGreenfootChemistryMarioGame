@@ -29,9 +29,9 @@ public class Level2 extends World
     public void act()
     {
         if (counter == 0){
+            Greenfoot.delay(220);
             showText(null,750/2+10,325);
             showText(null,175,60);
-            Greenfoot.delay(220);
             setBackground("level2p1.png");
             Greenfoot.delay(100);
              while (numEnters < 10){
