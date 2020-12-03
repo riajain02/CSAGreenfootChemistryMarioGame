@@ -1,17 +1,21 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class LevelPage here.
+ * Write a description of class AnimationCharacters here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class LevelPage extends Actor
+public class AnimationCharacter extends Character
 {
-    public static int levelsCompleted = 6;
+    public AnimationCharacter(GreenfootImage im)
+    {
+        im.scale(125,175);
+        setImage(im);
+    }
     
     /**
-     * Act - do whatever the LevelPage wants to do. This method is called whenever
+     * Act - do whatever the AnimationCharacters wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
