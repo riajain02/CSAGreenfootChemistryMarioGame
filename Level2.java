@@ -22,21 +22,25 @@ public class Level2 extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(750, 500, 1); 
         setBackground("level2start.png");
+        showText(""+Levels.numLives,750/2+10,325);
+        showText(""+Levels.numTotCoins + " J",175,60);
     }
     
     public void act()
     {
         if (counter == 0){
+            showText(null,750/2+10,325);
+            showText(null,175,60);
             Greenfoot.delay(220);
             setBackground("level2p1.png");
             Greenfoot.delay(100);
-            
-        while (numEnters < 10){
-            if (Greenfoot.getKey() == "enter"){
-                numEnters++;
-                tutorial();
+             while (numEnters < 10){
+                if (Greenfoot.getKey() == "enter"){
+                    numEnters++;
+                    tutorial();
+                }
             }
-        }
+            counter++;
         }
     }
     

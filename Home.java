@@ -11,7 +11,7 @@ public class Home extends World
 {
     public static Button play = new Button(100,50,"play.jpg","playhovered.jpg",1);
     public static Button info = new Button (30,30,"ibutton.jpg","ibuttonHovered.jpg",2);
-    public static Button howToPlay = new Button (650,450,"instructions.jpg",3);
+    public static Button howToPlay = new Button (650,450,"instructions.png",3);
     private int click = 0;
     private int hover = 0;
     private boolean hovering;

@@ -4,8 +4,8 @@ import java.util.List;
 /**
  * Write a description of class Level1 here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Ria Jain 
+ * @version 1.0
  */
 public class Level4 extends World
 {
@@ -24,7 +24,7 @@ public class Level4 extends World
         // Create a new world with 750x500 cells with a cell size of 1x1 pixels.
         super(750, 500, 1);
         setBackground("level4start.png");
-        showText(""+Levels.numLives,750/2+100,285);
+        showText(""+Levels.numLives,750/2+10,328);
         showText(""+Levels.numTotCoins + " J",175,60);
     }
     
@@ -33,7 +33,7 @@ public class Level4 extends World
         if(counter==0) {
             Greenfoot.delay(200);
             setBackground("level4-1.png");
-            showText(null,750/2+100,285);
+            showText(null,750/2+10,328);
             showText(null,175,60);
             Greenfoot.delay(100);
             while(numEnters<10) {

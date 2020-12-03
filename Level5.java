@@ -3,8 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class Level5 here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Ria Jain, Tinh-Phong Nguyen
+ * @version 1.1
  */
 public class Level5 extends World
 {
@@ -21,6 +21,8 @@ public class Level5 extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(750, 500, 1); 
         setBackground("level5start.png");
+        showText(""+Levels.numLives,750/2+10,328);
+        showText(""+Levels.numTotCoins + " J",175,60);
     }
     
     public void act()
@@ -28,6 +30,8 @@ public class Level5 extends World
          if (counter == 0){
             Greenfoot.delay(220);
             setBackground("level5p1.png");
+            showText(null,750/2+10,328);
+            showText(null,175,60);
             Greenfoot.delay(100);
         }
         while (numEnters < 7){

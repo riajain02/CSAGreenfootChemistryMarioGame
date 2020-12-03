@@ -21,20 +21,30 @@ public class Level3 extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(750, 500, 1); 
         setBackground("level3start.png");
+        showText(""+Levels.numLives,750/2+10,330);
+        showText(""+Levels.numTotCoins + " J",175,60);
     }
     
     public void act()
     {
         if (counter == 0){
             Greenfoot.delay(220);
+            showText(null,750/2+10,330);
+            showText(null,175,60);
             setBackground("level3p1.png");
             Greenfoot.delay(100);
-        while (numEnters < 5){
-            if (Greenfoot.getKey() == "enter"){
-                numEnters++;
-                tutorial();
+            while (numEnters < 5){
+                if (Greenfoot.getKey() == "enter"){
+                    numEnters++;
+                    tutorial();
+                }
             }
-        }
+            while (numEnters < 10){
+                if (Greenfoot.getKey() == "enter"){
+                    numEnters++;
+                    tutorial();
+                }
+            }
         }
     }
     

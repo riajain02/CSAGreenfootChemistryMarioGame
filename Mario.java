@@ -142,11 +142,13 @@ public class Mario extends LevelPage
             if (level==1){
                 Level1 world = new Level1();
                 Greenfoot.setWorld(world);
+                Character1.counterr=0;
                 levelStart.play();
             }
             if (level == 2){
                 Level2 world = new Level2();
                 Greenfoot.setWorld(world);
+                Character2.counterr=0;
                 levelStart.play();
             }
             if (level == 3){
@@ -162,6 +164,7 @@ public class Mario extends LevelPage
             }
             if(level == 5) {
                 Level5 world = new Level5();
+                Character5.counterr=0;
                 Greenfoot.setWorld(world);
                 levelStart.play();
             }
@@ -169,6 +172,7 @@ public class Mario extends LevelPage
                 Level6 level6 = new Level6();
                 Character6.counterr=0;
                 Greenfoot.setWorld(level6);
+                levelStart.play();
             }
         }
     }

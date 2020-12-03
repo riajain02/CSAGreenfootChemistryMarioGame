@@ -17,6 +17,11 @@ public class LessonNotes extends Actor
         setImage(image);
     }
     
+    public LessonNotes(GreenfootImage image)
+    {
+        setImage(image);
+    }
+    
     public void act() 
     {
         
